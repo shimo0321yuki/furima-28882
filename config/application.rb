@@ -9,8 +9,8 @@ Bundler.require(*Rails.groups)
 module Furima28882
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.assets.initialize_on_precompile = false
-    # config.load_defaults 6.0　元々あったコード
+    
+    config.load_defaults 6.0　
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
