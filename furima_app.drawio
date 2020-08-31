@@ -1,1 +1,46 @@
-<mxfile host="app.diagrams.net" modified="2020-08-31T12:50:51.594Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" etag="Cb6y8CPK8D6zAKzC-evT" version="13.6.5" type="github"><diagram id="AoNem2AF0D_MYnbLqUQu" name="Page-1">3VhbU6swEP41PNYBUih91IqXB7Wn9VxfnAgpZATChNQWf/1JSijXBvWonTkvHfbbzW2/L7uZamAWby8pTMMb4qNIM3V/q4FzzTSnjsN/BZAXgGWYBRBQ7BeQUQFL/IIkqEt0jX2UNQIZIRHDaRP0SJIgjzUwSCnZNMNWJGqumsIAdYClB6Mu+hP7LCxQx5xU+BXCQViubNjTwhPDMlieJAuhTzY1CLgamFFCWPEVb2coErkr81KMuzjg3W+MooS9ZkD44+lhk+lGuvhDg+23HCT2y0jO8gyjtTzw9b17s9RMO+KTnj1S/hWIL80FmgO0s7MExkjhDlBCVX6PxLHY8OEIHAtKDvtTij2VnwsQPyOaj1ZIFcbzBlWzwDxTuDMG2TqTxLK8VAsl68RHIuEGj96EmKFlCj3h3fDrwbGQxZF0y9QjytD2IKfGXin8hiESI0ZzHiIHWECKS94uW5qbSqrmVGJhXaYTCUJ5PYL91JWC+IcU0RsEZXYE9X3pLvoEpZAY9p4GZIZiiCOVSGCWbQj1FSErTDM2GlhnBWMc5YNR+6lGTzBRyao231DoI6Ys5DI8usimwxpzvlRjoKOx5dXdfH59e8nR69uLO1X9ocjHqvIDfZ+iTHX3U8Jvv1J8IUlQhzZ+MN600DBlMEuLTrbCW0HzhxSKFonA6rJo9LLofBaLdofFubuYXZ0u3TcVC57K+AGrLvo6Q3QXceR7BMwWB9MeDqw+DsBncWB0+39Xtz5/EEmTnxSzfIEiyDBJ3MpztiIJk683/sJrpA4l/ql4iXHTXfCbcU9uYJILxxazXyLoRDcMaf/mtn5iTcfSPhfJ00sjrxlzRDHPAqISKzYudqvmhx+OrKmHhppYl8c6T3ofTyVIdwl6bm6kjzy5xpxg8STaC6V1WY2p1ZyiOIAcVX/ytSayWooz7NZeGKQBYp2JdlraH/wf5NV9DXyyvGKY+HeJGMFrNGV9Dr4IzYXsRvqJrk9KpBSeVQKV8nZWXrfer70i40PN7XjaGztNyYytyTu1N2lVO1v/Wu11XwlHKG1cUbXCZiiL2v9TwMx2p2s3sNeKCBhtNVpfK6LxEQpY3lu9Wg1TdxoNE+jWMRumfeSi1a4179Wb3ap+5vijihY3q796ivDq/zLg/gU=</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-08-31T13:00:24.164Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" etag="XdFscH-YRV0g2z5UjOEH" version="13.6.5" type="github">
+  <diagram id="AoNem2AF0D_MYnbLqUQu" name="Page-1">
+    <mxGraphModel dx="1186" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="hVk_ws01pRZrgxQy3n6z-1" value="ITEMS&lt;br&gt;・name&lt;br&gt;・genre&lt;br&gt;・comment&lt;br&gt;・image&lt;br&gt;・price&lt;br&gt;・delivery-fee&lt;br&gt;・area&lt;br&gt;・days&lt;br&gt;・status" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="530" y="60" width="290" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="hVk_ws01pRZrgxQy3n6z-2" value="USERS&lt;br&gt;&lt;br&gt;・nickname&lt;br&gt;・email&lt;br&gt;・password&lt;br&gt;・first-name&lt;br&gt;・family-name&lt;br&gt;・first-name-kana&lt;br&gt;・family-name-kana&lt;br&gt;・birthday" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="90" y="60" width="280" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="hVk_ws01pRZrgxQy3n6z-3" value="SHOPPING INFO&lt;br&gt;・credit&lt;br&gt;・address&lt;br&gt;・postal&lt;br&gt;・phone" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="590" y="350" width="180" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="hVk_ws01pRZrgxQy3n6z-6" value="PERCHASE&lt;br&gt;&lt;br&gt;・item_id&lt;br&gt;・user_id" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="320" y="390" width="150" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="hVk_ws01pRZrgxQy3n6z-11" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;exitX=1.011;exitY=0.594;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="hVk_ws01pRZrgxQy3n6z-2" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="390" y="195" as="sourcePoint" />
+            <mxPoint x="520" y="161" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hVk_ws01pRZrgxQy3n6z-12" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmandOne;startArrow=ERmandOne;entryX=-0.007;entryY=0.595;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="hVk_ws01pRZrgxQy3n6z-3" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="480" y="457" as="sourcePoint" />
+            <mxPoint x="570" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hVk_ws01pRZrgxQy3n6z-13" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="hVk_ws01pRZrgxQy3n6z-2" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="220" y="330" as="sourcePoint" />
+            <mxPoint x="310" y="455" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hVk_ws01pRZrgxQy3n6z-14" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmany;startArrow=ERmany;exitX=1.008;exitY=0.305;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="hVk_ws01pRZrgxQy3n6z-6" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="470" y="330" as="sourcePoint" />
+            <mxPoint x="680" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
