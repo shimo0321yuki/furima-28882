@@ -34,37 +34,35 @@ Things you may want to cover:
 | family-name        | string   | null: false |
 | first-name-kana    | string   | null: false |
 | family-name-kana   | string   | null: false |
-| birthday           | integer  | null: false |
+| birthday           | date     | null: false |
 
 ### Association
 
-- has_many :item
-- has_many :good
+- has_many :items
+- has_many :goods
 
 ## items テーブル
 
 | Column          | Type       | Options     |
-| --------------- | ---------- | ----------- |
-| name_id         | integer    | null: false |
-| genre_id        | integer    | null: false |
-| status_id       | integer    | null: false |
-| price           | integer    | null: false |
-| delivery-fee_id | integer    | null: false |
-| area_id         | string     | null: false |
-| days_id         | date       | null: false |
-| user_id         | references | null: false |
+| --------------- | -------- | ----------- |
+| name_id         | string   | null: false |
+| genre_id        | integer  | null: false |
+| status_id       | integer  | null: false |
+| price           | integer  | null: false |
+| delivery-fee_id | integer  | null: false |
+| user_id         | integer  | null: false |
 
 ### Association
 
-- has_many :good
+- has_many :goods
 - belongs_to:user
 
 ## goods テーブル
 
-| Column | Type       | Options                        |
-| ------ | ---------- | ------------------------------ |
-| user   | references | null: false, foreign_key: true |
-| item   | references | null: false, foreign_key: true |
+| Column    | Type   | Options                        |
+| --------- | ------ | ------------------------------ |
+| user_id   | string | null: false, foreign_key: true |
+| item_id   | string | null: false, foreign_key: true |
 
 ### Association
 
@@ -81,6 +79,7 @@ Things you may want to cover:
 | city          | string  | null: false |
 | address       | integer | null: false |
 | phone         | integer | null: false |
+| goods_id      | string  | null: false |
 
 
 ### Association
