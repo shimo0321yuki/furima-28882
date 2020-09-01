@@ -38,26 +38,26 @@ Things you may want to cover:
 
 ### Association
 
-- has_many :items
-- has_many :goods
+- has_many :item
+- has_many :good
 
 ## items テーブル
 
-| Column       | Type    | Options     |
-| ------------ | ------- | ----------- |
-| name         | string  | null: false |
-| genre        | string  | null: false |
-| comment      | string  | null: false |
-| status       | string  | null: false |
-| price        | integer | null: false |
-| delivery-fee | integer | null: false |
-| area         | string  | null: false |
-| days         | integer | null: false |
+| Column          | Type       | Options     |
+| --------------- | ---------- | ----------- |
+| name_id         | integer    | null: false |
+| genre_id        | integer    | null: false |
+| status_id       | integer    | null: false |
+| price           | integer    | null: false |
+| delivery-fee_id | integer    | null: false |
+| area_id         | string     | null: false |
+| days_id         | date       | null: false |
+| user_id         | references | null: false |
 
 ### Association
 
-- has_many :goods
-- belongs_to:users 
+- has_many :good
+- belongs_to:user
 
 ## goods テーブル
 
@@ -68,20 +68,21 @@ Things you may want to cover:
 
 ### Association
 
-- belongs_to :goods
+- belongs_to :good
 - belongs_to :user
 - has_one_to :information
 
 ## information テーブル
 
-| Column  | Type    | Options     |
-| ------- | ------- | ----------- |
-| credit  | string  | null: false |
-| address | string  | null: false |
-| postal  | integer | null: false |
-| phone   | integer | null: false |
+| Column        | Type    | Options     |
+| ------------- | ------- | ----------- |
+| prefecture_id | integer | null: false |
+| postal        | integer | null: false |
+| city          | string  | null: false |
+| address       | integer | null: false |
+| phone         | integer | null: false |
 
 
 ### Association
 
-- belongs_to :goods
+- belongs_to :good
