@@ -43,18 +43,18 @@ Things you may want to cover:
 
 ## items テーブル
 
-| Column          | Type       | Options     |
-| --------------- | -------- | ----------- |
-| name_id         | string   | null: false |
-| genre_id        | integer  | null: false |
-| status_id       | integer  | null: false |
-| price           | integer  | null: false |
-| delivery-fee_id | integer  | null: false |
-| user_id         | integer  | null: false |
+| Column          | Type     | Options                       |
+| --------------- | -------- | ----------------------------- |
+| name            | string   | null: false                   |
+| genre_id        | integer  | null: false ,foreign_key: true|
+| status_id       | integer  | null: false ,foreign_key: true|
+| price           | integer  | null: false                   |
+| delivery-fee_id | integer  | null: false ,foreign_key: true|
+| user_id         | integer  | null: false ,foreign_key: true|
 
 ### Association
 
-- has_many :goods
+- have_one :good
 - belongs_to:user
 
 ## goods テーブル
@@ -66,20 +66,20 @@ Things you may want to cover:
 
 ### Association
 
-- belongs_to :good
+- belongs_to :item
 - belongs_to :user
-- has_one_to :information
+- has_one :information
 
 ## information テーブル
 
-| Column        | Type    | Options     |
-| ------------- | ------- | ----------- |
-| prefecture_id | integer | null: false |
-| postal        | integer | null: false |
-| city          | string  | null: false |
-| address       | integer | null: false |
-| phone         | integer | null: false |
-| goods_id      | string  | null: false |
+| Column        | Type    | Options                        |
+| ------------- | ------- | ------------------------------ |
+| prefecture_id | integer | null: false ,foreign_key: true |
+| postal        | string  | null: false                    |
+| city          | string  | null: false                    |
+| address       | string  | null: false                    |
+| phone         | string  | null: false                    |
+| goods_id      | string  | null: false ,foreign_key: true |
 
 
 ### Association
