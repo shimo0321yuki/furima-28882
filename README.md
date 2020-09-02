@@ -50,6 +50,8 @@ Things you may want to cover:
 | status_id       | integer    | null: false                   |
 | price           | integer    | null: false                   |
 | delivery-fee_id | integer    | null: false                   |
+| area_id         | integer    | null: false                   |
+| days_id         | integer    | null: false                   |
 | user            | reference  | null: false ,foreign_key: true|
 
 ### Association
@@ -78,7 +80,7 @@ Things you may want to cover:
 | postal          | string    | null: false                    |
 | city            | string    | null: false                    |
 | address         | string    | null: false                    |
-| building-number | string    | null: false                    |
+| building-number | string    |                                |
 | phone           | string    | null: false                    |
 | good            | reference | null: false ,foreign_key: true |
 
