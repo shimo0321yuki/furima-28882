@@ -1,19 +1,19 @@
-<mxfile host="app.diagrams.net" modified="2020-08-31T13:05:31.304Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" etag="GV7ujlh3BcLApjvtTm_2" version="13.6.5" type="github">
+<mxfile host="app.diagrams.net" modified="2020-09-02T02:24:42.962Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" etag="kgYX34res7ip-Qxkk3O3" version="13.6.5" type="github">
   <diagram id="AoNem2AF0D_MYnbLqUQu" name="Page-1">
-    <mxGraphModel dx="1186" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="383" dy="448" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="hVk_ws01pRZrgxQy3n6z-1" value="ITEMS&lt;br&gt;・name&lt;br&gt;・genre&lt;br&gt;・comment&lt;br&gt;・image&lt;br&gt;・price&lt;br&gt;・delivery-fee&lt;br&gt;・area&lt;br&gt;・days&lt;br&gt;・status" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="hVk_ws01pRZrgxQy3n6z-1" value="ITEMS&lt;br&gt;・name&lt;br&gt;・genre_id&lt;br&gt;・price&lt;br&gt;・delivery-fee_id&lt;br&gt;・status_id&lt;br&gt;・user" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="530" y="60" width="290" height="170" as="geometry" />
         </mxCell>
         <mxCell id="hVk_ws01pRZrgxQy3n6z-2" value="USERS&lt;br&gt;&lt;br&gt;・nickname&lt;br&gt;・email&lt;br&gt;・password&lt;br&gt;・first-name&lt;br&gt;・family-name&lt;br&gt;・first-name-kana&lt;br&gt;・family-name-kana&lt;br&gt;・birthday" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="90" y="60" width="280" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="hVk_ws01pRZrgxQy3n6z-3" value="SHOPPING INFO&lt;br&gt;・credit&lt;br&gt;・address&lt;br&gt;・postal&lt;br&gt;・phone" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+        <mxCell id="hVk_ws01pRZrgxQy3n6z-3" value="INFORMTION&lt;br&gt;・prefecture_id&lt;br&gt;・postal&lt;br&gt;・city&lt;br&gt;・address&lt;br&gt;・building-number&lt;br&gt;・phone&lt;br&gt;・good" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="590" y="350" width="180" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="hVk_ws01pRZrgxQy3n6z-6" value="PERCHASE&lt;br&gt;&lt;br&gt;・item_id&lt;br&gt;・user_id" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="hVk_ws01pRZrgxQy3n6z-6" value="GOODS&lt;br&gt;&lt;br&gt;・item&lt;br&gt;・user" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="320" y="390" width="150" height="130" as="geometry" />
         </mxCell>
         <mxCell id="hVk_ws01pRZrgxQy3n6z-11" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;exitX=1.011;exitY=0.594;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="hVk_ws01pRZrgxQy3n6z-2" edge="1">
