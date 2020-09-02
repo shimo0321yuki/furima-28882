@@ -43,26 +43,26 @@ Things you may want to cover:
 
 ## items テーブル
 
-| Column          | Type     | Options                       |
-| --------------- | -------- | ----------------------------- |
-| name            | string   | null: false                   |
-| genre_id        | integer  | null: false ,foreign_key: true|
-| status_id       | integer  | null: false ,foreign_key: true|
-| price           | integer  | null: false                   |
-| delivery-fee_id | integer  | null: false ,foreign_key: true|
-| user_id         | integer  | null: false ,foreign_key: true|
+| Column          | Type       | Options                       |
+| --------------- | ---------- | ----------------------------- |
+| name            | string     | null: false                   |
+| genre_id        | integer    | null: false                   |
+| status_id       | integer    | null: false                   |
+| price           | integer    | null: false                   |
+| delivery-fee_id | integer    | null: false                   |
+| user            | reference  | null: false ,foreign_key: true|
 
 ### Association
 
-- have_one :good
+- has_one :good
 - belongs_to:user
 
 ## goods テーブル
 
-| Column    | Type   | Options                        |
-| --------- | ------ | ------------------------------ |
-| user_id   | string | null: false, foreign_key: true |
-| item_id   | string | null: false, foreign_key: true |
+| Column | Type      | Options                        |
+| ------ | --------- | ------------------------------ |
+| user   | reference | null: false, foreign_key: true |
+| item   | reference | null: false, foreign_key: true |
 
 ### Association
 
@@ -72,14 +72,15 @@ Things you may want to cover:
 
 ## information テーブル
 
-| Column        | Type    | Options                        |
-| ------------- | ------- | ------------------------------ |
-| prefecture_id | integer | null: false ,foreign_key: true |
-| postal        | string  | null: false                    |
-| city          | string  | null: false                    |
-| address       | string  | null: false                    |
-| phone         | string  | null: false                    |
-| goods_id      | string  | null: false ,foreign_key: true |
+| Column          | Type      | Options                        |
+| --------------- | --------- | ------------------------------ |
+| prefecture_id   | integer   | null: false                    |
+| postal          | string    | null: false                    |
+| city            | string    | null: false                    |
+| address         | string    | null: false                    |
+| building-number | string    | null: false                    |
+| phone           | string    | null: false                    |
+| good            | reference | null: false ,foreign_key: true |
 
 
 ### Association
