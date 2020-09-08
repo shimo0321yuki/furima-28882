@@ -4,4 +4,8 @@ class ItemsController < ApplicationController
 
   def search
   end
+
+  def new
+  end
+  
 end
