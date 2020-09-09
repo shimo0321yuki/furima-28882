@@ -70,3 +70,7 @@ gem 'devise'
 gem 'active_hash'
 gem 'gimei'
 gem 'pry-rails'
+gem "aws-sdk-s3", require: false
+gem "google-cloud-storage", "~> 1.8", require: false
+gem 'mini_magick'
+gem 'image_processing', '~> 1.2'

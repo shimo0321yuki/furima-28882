@@ -11,9 +11,18 @@ class ApplicationController < ActionController::Base
       .permit(:sign_up, keys: [:nickname, :email, :password, :first_name, :family_name, :first_name_kana, :family_name_kana, :birthday])
   end
 
+  # def create
+  #   item = Item.create!(item_params)
+  #   redirect_to item
+  # end   いるのかな？
+
   private
 
-  def basic_auth
+    # def item_params
+    #   params.require(:item).permit(:images [])
+    # end   いるのかな？
+
+    def basic_auth
     authenticate_or_request_with_http_basic do |username, password|
       username == 'admin' && password == '2222'
     end
