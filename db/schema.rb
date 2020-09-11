@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_09_090633) do
+ActiveRecord::Schema.define(version: 2020_09_09_062911) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -33,14 +33,9 @@ ActiveRecord::Schema.define(version: 2020_09_09_090633) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "comment"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
+    t.string "information"
     t.integer "genre_id"
     t.integer "status_id"
     t.integer "price"
@@ -61,7 +56,7 @@ ActiveRecord::Schema.define(version: 2020_09_09_090633) do
     t.string "family_name", default: "", null: false
     t.string "first_name_kana", default: "", null: false
     t.string "family_name_kana", default: "", null: false
-    t.date "birthday", null: false
+    t.string "birthday", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

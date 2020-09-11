@@ -1,10 +1,19 @@
 class Item < ApplicationRecord
-  has_one :good
-  belongs_to :user
-  has_one_attached :image
-  has_one :comment
+  def was_attached?
+    image.attached?
+  end
 
-  validates :price, format: { with: /[0-9]/ }, inclusion: {in: 300..9999999 } 
+  with_options presence: true do
+    validates :price, format: { with: /[0-9]/ }, inclusion: {in: 300..9_999_999 }
+    validates :image
+    validates :genre_id
+    validates :status_id
+    validates :delivery_fee_id
+    validates :area_id
+    validates :days_id
+    validates :name
+    validates :information
+  end
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to_active_hash :area
@@ -12,12 +21,7 @@ class Item < ApplicationRecord
   belongs_to_active_hash :delivery_fee
   belongs_to_active_hash :genre
   belongs_to_active_hash :status
-
- with_options presence: true do
-  validates :genre_id
-  validates :status_id
-  validates :delivery_fee_id
-  validates :area_id
-  validates :days_id
- end 
+  has_one :good
+  belongs_to :user
+  has_one_attached :image
 end

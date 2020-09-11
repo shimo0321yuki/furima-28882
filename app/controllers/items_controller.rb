@@ -1,20 +1,20 @@
 class ItemsController < ApplicationController
-before_action :select_item, only:[:edit, :show, :destroy, :price]
+  before_action :select_item, only: [:edit, :show, :destroy, :price]
 
   def index
-    @items = Item.all.order("created_at DESC")
+    @items = Item.all.order('created_at DESC')
   end
 
   def edit
   end
 
   def new
-   @item = Item.new
+    @item = Item.new
   end
 
   def create
-   @item = Item.create(item_params)
-   redirect_to root_path
+    @item = Item.create(item_params)
+    redirect_to root_path
   end
 
   def show
@@ -22,17 +22,6 @@ before_action :select_item, only:[:edit, :show, :destroy, :price]
 
   def destroy
   end
-
-  # def price
-  #   binding.pry
-  #   if item.price then
-  #     item.new(price: true)
-  #   else
-  #     item.destroy(price: nil)
-  #   end
-  #   item = Item.find(params[:id])
-  #   render json: { item: item }
-  # end
 
   private
 
@@ -43,5 +32,4 @@ before_action :select_item, only:[:edit, :show, :destroy, :price]
   def select_item
     @item = Item.find(params[:id])
   end
-
 end

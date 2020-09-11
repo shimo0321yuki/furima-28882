@@ -18,11 +18,11 @@ class ApplicationController < ActionController::Base
 
   private
 
-    # def item_params
-    #   params.require(:item).permit(:images [])
-    # end   いるのかな？
+  # def item_params
+  #   params.require(:item).permit(:images [])
+  # end   いるのかな？
 
-    def basic_auth
+  def basic_auth
     authenticate_or_request_with_http_basic do |username, password|
       username == 'admin' && password == '2222'
     end
