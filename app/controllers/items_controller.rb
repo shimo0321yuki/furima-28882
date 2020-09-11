@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-before_action :select_item, only:[:edit, :show, :destroy]
+before_action :select_item, only:[:edit, :show, :destroy, :price]
 
   def index
     @items = Item.all.order("created_at DESC")
@@ -22,6 +22,17 @@ before_action :select_item, only:[:edit, :show, :destroy]
 
   def destroy
   end
+
+  # def price
+  #   binding.pry
+  #   if item.price then
+  #     item.new(price: true)
+  #   else
+  #     item.destroy(price: nil)
+  #   end
+  #   item = Item.find(params[:id])
+  #   render json: { item: item }
+  # end
 
   private
 
