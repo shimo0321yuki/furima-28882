@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
   before_action :select_item, only: [:edit, :show, :destroy, :price]
 
   def index
-    @items = Item.all.order('created_at DESC')
+    # @items = Item.all.order('created_at DESC')
   end
 
   def edit
@@ -13,8 +13,12 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.create(item_params)
-    redirect_to root_path
+    @item = Item.new(item_params)
+    if @item.save
+      redirect_to root_path
+    else
+      redirect_to 'new'
+    end
   end
 
   def show
@@ -26,7 +30,8 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:image, :name, :genre_id, :status_id, :delivery_fee_id, :area_id, :days_id, :price).merge(user_id: current_user.id)
+    params.require(:item).permit(:image, :name, :information, :genre_id, :status_id,
+                                 :delivery_fee_id, :area_id, :days_id, :price).merge(user_id: current_user.id)
   end
 
   def select_item

@@ -8,19 +8,10 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     devise_parameter_sanitizer
-      .permit(:sign_up, keys: [:nickname, :email, :password, :first_name, :family_name, :first_name_kana, :family_name_kana, :birthday])
+      .permit(:sign_up, keys: [:nickname, :first_name, :family_name, :first_name_kana, :family_name_kana, :birthday])
   end
 
-  # def create
-  #   item = Item.create!(item_params)
-  #   redirect_to item
-  # end   いるのかな？
-
   private
-
-  # def item_params
-  #   params.require(:item).permit(:images [])
-  # end   いるのかな？
 
   def basic_auth
     authenticate_or_request_with_http_basic do |username, password|
@@ -31,3 +22,5 @@ end
 
 # ENV["BASIC_AUTH_USER"]
 # ENV["BASIC_ATH_PASSWORD"]
+
+# :email, :password,
