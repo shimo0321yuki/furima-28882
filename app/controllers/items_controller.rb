@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
   before_action :select_item, only: [:edit, :show, :destroy, :price]
 
   def index
-    # @items = Item.all.order('created_at DESC')
+    @items = Item.all.order('created_at DESC')
   end
 
   def edit
