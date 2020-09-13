@@ -4,7 +4,7 @@ class Item < ApplicationRecord
   end
 
   with_options presence: true do
-    validates :price, format: { with: /[0-9]/ }, inclusion: {in: 300..9_999_999 }
+    validates :price, format: { with: /[0-9]/ }, inclusion: { in: 300..9_999_999 }
     validates :image
     validates :genre_id
     validates :status_id
