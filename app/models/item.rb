@@ -21,7 +21,7 @@ class Item < ApplicationRecord
   belongs_to_active_hash :delivery_fee
   belongs_to_active_hash :genre
   belongs_to_active_hash :status
-  has_one :good
+  has_one :purchaser
   belongs_to :user
   has_one_attached :image
 end
