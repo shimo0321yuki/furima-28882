@@ -3,7 +3,7 @@ class Order < ApplicationRecord
     validates :prefecture_id
     validates :postal, format: { with: /\A\d{3}[-]\d{4}\z/ }
     validates :city, format: { with: /\A[一-龥ぁ-ん]/ }
-    validates :address, format: { with: /\A[一-龥ぁ-ん]/ }
+    validates :address, format: { with: /\A[一-龥ぁ-ん][-]\d/ }
     validates :building_number
     validates :phone, format: { with: /\A\d{11}\z/}
     validates :purchaser
