@@ -16,4 +16,6 @@ class User < ApplicationRecord
   end
 
   has_many :items
+  has_one :purchaser
+  has_many :orders
 end

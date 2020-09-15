@@ -2,7 +2,7 @@ class OrdersController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @item = Item.find(params[:id])
+    @item = Item.find(params[:item_id])
     # @order = Order.find(params[:id])
   end
 
@@ -12,7 +12,7 @@ class OrdersController < ApplicationController
   private
 
   def item_params
-    params.require(:order).permit(:prefecture_id, :postal, :city, :address, 
+    params.require(:order).permit(:prefecture_id, :postal, :city, :address,
                                   :building_number, :phone, :purchaser, :price).merge(c)
   end
   
