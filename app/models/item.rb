@@ -22,6 +22,7 @@ class Item < ApplicationRecord
   belongs_to_active_hash :genre
   belongs_to_active_hash :status
   has_one :purchaser
+  has_one :order
   belongs_to :user
   has_one_attached :image
 end
