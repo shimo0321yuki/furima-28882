@@ -59,7 +59,7 @@ Things you may want to cover:
 - has_one :good
 - belongs_to:user
 
-## goods テーブル
+##  purchaser テーブル
 
 | Column | Type      | Options                        |
 | ------ | --------- | ------------------------------ |
@@ -70,9 +70,9 @@ Things you may want to cover:
 
 - belongs_to :item
 - belongs_to :user
-- has_one :information
+- has_one :order
 
-## information テーブル
+## order テーブル
 
 | Column          | Type      | Options                        |
 | --------------- | --------- | ------------------------------ |
@@ -82,7 +82,7 @@ Things you may want to cover:
 | address         | string    | null: false                    |
 | building-number | string    |                                |
 | phone           | string    | null: false                    |
-| good            | reference | null: false ,foreign_key: true |
+| purchaser       | reference | null: false ,foreign_key: true |
 
 
 ### Association
