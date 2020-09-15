@@ -1,13 +1,13 @@
 class Order < ApplicationRecord
   with_options presence: true do
     validates :prefecture_id
-    validates :postal
-    validates :city
-    validates :address
+    validates :postal, format: { with: /\A\d{3}[-]\d{4}\z/ }
+    validates :city, format: { with: /\A[一-龥ぁ-ん]/ }
+    validates :address, format: { with: /\A[一-龥ぁ-ん]/ }
     validates :building_number
-    validates :phone
+    validates :phone, format: { with: /\A\d{11}\z/}
     validates :purchaser
-    validates :price
+    validates :price, format: { with: /[0-9]/ }, inclusion: { in: 300..9_999_999 }
   end
 
   extend ActiveHash::Associations::ActiveRecordExtensions
