@@ -56,7 +56,6 @@ ActiveRecord::Schema.define(version: 2020_09_14_062239) do
     t.string "building_number"
     t.string "phone", null: false
     t.bigint "purchaser_id", null: false
-    t.integer "token", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["purchaser_id"], name: "index_orders_on_purchaser_id"

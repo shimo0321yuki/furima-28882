@@ -18,7 +18,7 @@ class PurchaserOrder
 
    order = Order.create(prefecture_id: prefecture_id, postal: postal, city: city,
                         address: address, building_number: building_number, phone: phone,
-                        purchaser_id: purchaser.id, token: token)
+                        purchaser_id: purchaser.id)
    
   end
 end

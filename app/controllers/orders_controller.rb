@@ -22,7 +22,8 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:purchaser_order).permit(:prefecture_id, :postal, :city, :address, :building_number, :phone, :item_id).merge(user_id: current_user.id, token: params[:token])
+    params.require(:purchaser_order).permit(:prefecture_id, :postal, :city, :address, :building_number, :phone)
+    .merge(user_id: current_user.id, token: params[:token], item_id: params[:item_id])
   end
 
   def redirect_user
@@ -41,4 +42,3 @@ class OrdersController < ApplicationController
   end
 
 end
-
