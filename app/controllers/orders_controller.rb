@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
   before_action :redirect_user, only: [:index]
+  before_action :redirect_item, only: [:index]
 
   def index
     @item = Item.find(params[:item_id])
@@ -26,12 +27,6 @@ class OrdersController < ApplicationController
     .merge(user_id: current_user.id, token: params[:token], item_id: params[:item_id])
   end
 
-  def redirect_user
-    if user_signed_in? == current_user[:user_id]
-      redirect_to user_session_path
-    end
-  end
-
   def pay_item
     Payjp.api_key = "sk_test_5d821fce29033fa3320389d7"
     Payjp::Charge.create(
@@ -41,4 +36,18 @@ class OrdersController < ApplicationController
     )
   end
 
+  def redirect_user
+    @item = Item.find(params[:item_id])
+    if current_user.id == @item.user_id
+       redirect_to root_path
+    end
+  end
+
+  def redirect_item
+    if @item.purchaser.present?
+       redirect_to root_path
+    end
+  end
+  
 end
+  
