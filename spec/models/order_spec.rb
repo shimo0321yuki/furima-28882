@@ -6,6 +6,15 @@ RSpec.describe PurchaserOrder, type: :model do
   end
 
   describe '商品購入機能' do
+    it '全ての値が存在すれば保存できること' do
+      expect(@purchaser_order).to be_valid
+    end
+
+    it '建物名が空であっても保存できること' do
+      @purchaser_order.building_number = ' '
+      expect(@purchaser_order).to be_valid
+    end
+    
     it 'クレジットカード情報が必須であること' do
       @purchaser_order.token = ' '
       @purchaser_order.valid?

@@ -2,26 +2,29 @@ class OrdersController < ApplicationController
   before_action :authenticate_user!
   before_action :redirect_user, only: [:index]
   before_action :redirect_item, only: [:index]
+  before_action :select_item, only: [:index, :create]
+
 
   def index
-    @item = Item.find(params[:item_id])
     @order = PurchaserOrder.new
   end
 
   def create
     @order = PurchaserOrder.new(order_params)
-    @item = Item.find(params[:item_id])
     if @order.valid?
       pay_item
       @order.save
       redirect_to root_path
     else
-      @item = Item.find(params[:item_id])
       render 'index'
     end
   end
 
   private
+
+  def select_item
+    @item = Item.find(params[:item_id])
+  end
 
   def order_params
     params.require(:purchaser_order).permit(:prefecture_id, :postal, :city, :address, :building_number, :phone)

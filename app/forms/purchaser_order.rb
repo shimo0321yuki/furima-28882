@@ -15,9 +15,8 @@ class PurchaserOrder
   def save
     purchaser = Purchaser.create(user_id: user_id, item_id: item_id)
 
-    order = Order.create(prefecture_id: prefecture_id, postal: postal, city: city,
-                         address: address, building_number: building_number, phone: phone)
+    order = Order.create(prefecture_id: prefecture_id, postal: postal, city: city,address: address, 
+                         building_number: building_number, phone: phone, purchaser_id: purchaser.id)
   end
 end
 
-# length: { maximum: 11 }, format: { with: /\0\d{9,10}/ }
