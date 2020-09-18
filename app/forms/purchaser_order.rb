@@ -4,12 +4,11 @@ class PurchaserOrder
                 :prefecture_id, :postal, :city, :address, :building_number, :phone, :token
 
   with_options presence: true do
-    # 'orderのバリデーション'
     validates :prefecture_id
     validates :postal, format: { with: /\A\d{3}[-]\d{4}\z/ }
     validates :city
     validates :address
-    validates :phone, length: { maximum: 11 }, format: { with: /\0\d{9,10}/ }
+    validates :phone,  format: { with: /\A\d{11}\z/ }
     validates :token
   end
 
@@ -20,3 +19,5 @@ class PurchaserOrder
                          address: address, building_number: building_number, phone: phone)
   end
 end
+
+# length: { maximum: 11 }, format: { with: /\0\d{9,10}/ }

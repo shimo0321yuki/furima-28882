@@ -1,11 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe PurchaserOrder, type: :model do
-  # let(:order) { FactoryBot.create(:order) }
   before do
-    # user = FactoryBot.create(:user)
-    # item = FactoryBot.create(:item)
-    # @purchaser_order = FactoryBot.build(:purchaser_order, user_id: user.id, item_id: item.id)
     @purchaser_order = FactoryBot.build(:purchaser_order)
   end
 
