@@ -49,3 +49,4 @@ class OrdersController < ApplicationController
     redirect_to root_path if @item.purchaser.present?
   end
 end
+  
