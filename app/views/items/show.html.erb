@@ -28,14 +28,13 @@
     <%= link_to '商品の編集', edit_item_path, method: :get, class: "item-red-btn" %>
     <p class='or-text'>or</p>
     <%= link_to '削除', item_path, method: :delete, class:'item-destroy' %>
-   <% else %>
-     <% if @item.purchaser.present?%>
-      
-     <% else  @item.present? %>
+   <% elsif user_signed_in? && current_user.id! == @item.user_id %>
+     <% unless @item.purchaser.present? %>
       <%= link_to '購入画面に進む', item_orders_path(@item.id), class:"item-red-btn"%>
-     <% end %>
-      <% link_to user_session_path %>
-  <% end %>
+      <% end %>
+   <% else %>
+     <%= link_to '購入画面に進む', user_session_path, class:"item-red-btn"%>
+   <% end %>
 
     <div class="item-explain-box">
       <span><%= "商品説明" %></span>
