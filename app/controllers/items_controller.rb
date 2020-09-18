@@ -1,11 +1,8 @@
 class ItemsController < ApplicationController
-  before_action :select_item, only: [:edit, :show, :destroy, :price]
+  before_action :select_item, only: [:edit, :show, :destroy, :update]
 
   def index
-    @items = Item.all.order('created_at DESC')
-  end
-
-  def edit
+    @items = Item.all.order("created_at DESC")
   end
 
   def new
@@ -25,7 +22,23 @@ class ItemsController < ApplicationController
   def show
   end
 
+  def edit
+  end
+
+  def update
+    if @item.update(item_params)
+      redirect_to item_path
+    else
+      render 'edit'
+    end
+  end
+
   def destroy
+    if @item.destroy
+      redirect_to root_path
+    else
+      render 'show'
+    end
   end
 
   private
