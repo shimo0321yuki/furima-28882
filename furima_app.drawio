@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-09-02T03:11:44.845Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" etag="75NLQsPDxfUu-duFiZBM" version="13.6.5" type="github">
+<mxfile host="app.diagrams.net" modified="2020-09-21T07:22:09.500Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36" etag="FyAmFLhY4R5UyHUNRiBg" version="13.7.2" type="github">
   <diagram id="AoNem2AF0D_MYnbLqUQu" name="Page-1">
-    <mxGraphModel dx="383" dy="448" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1186" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -13,7 +13,7 @@
         <mxCell id="hVk_ws01pRZrgxQy3n6z-3" value="INFORMTION&lt;br&gt;・prefecture_id&lt;br&gt;・postal&lt;br&gt;・city&lt;br&gt;・address&lt;br&gt;・building-number&lt;br&gt;・phone&lt;br&gt;・good" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="590" y="350" width="180" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="hVk_ws01pRZrgxQy3n6z-6" value="GOODS&lt;br&gt;&lt;br&gt;・item&lt;br&gt;・user" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="hVk_ws01pRZrgxQy3n6z-6" value="purchaser&lt;br&gt;・item&lt;br&gt;・user" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="320" y="390" width="150" height="130" as="geometry" />
         </mxCell>
         <mxCell id="hVk_ws01pRZrgxQy3n6z-11" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;exitX=1.011;exitY=0.594;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="hVk_ws01pRZrgxQy3n6z-2" edge="1">
@@ -34,11 +34,14 @@
             <mxPoint x="310" y="455" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="O4eOR0pT4zCqjQMqQ8AL-1" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;exitX=1.002;exitY=0.06;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="hVk_ws01pRZrgxQy3n6z-6">
+        <mxCell id="O4eOR0pT4zCqjQMqQ8AL-1" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;exitX=1.002;exitY=0.06;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="hVk_ws01pRZrgxQy3n6z-6" edge="1">
           <mxGeometry width="100" height="100" relative="1" as="geometry">
             <mxPoint x="480" y="280" as="sourcePoint" />
             <mxPoint x="627" y="240" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="2E7vlsA6IlPS6bG4hLhl-1" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="890" y="290" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
