@@ -70,7 +70,7 @@ Things you may want to cover:
 
 - belongs_to :item
 - belongs_to :user
-- has_many :orders
+- has_one :order
 
 ## order テーブル
 
@@ -88,7 +88,7 @@ Things you may want to cover:
 ### Association
 - belongs_to :purchaser
 
-## mypage テーブル
+<!-- ## mypage テーブル
 
 | Column          | Type      | Options                        |
 | --------------- | --------- | ------------------------------ |
@@ -102,7 +102,7 @@ Things you may want to cover:
 - belongs_to :item
 - belongs_to :user
 - belongs_to :order
-- belongs_to :purchaser
+- belongs_to :purchaser -->
 
 
 記述すること	　　　　　　|備考
