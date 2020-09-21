@@ -8,7 +8,7 @@ class PurchaserOrder
     validates :postal, format: { with: /\A\d{3}[-]\d{4}\z/ }
     validates :city
     validates :address
-    validates :phone,  format: { with: /\A\d{11}\z/ }
+    validates :phone, format: { with: /\A\d{11}\z/ }
     validates :token
   end
 
