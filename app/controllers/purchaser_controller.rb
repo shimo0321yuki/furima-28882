@@ -8,10 +8,6 @@ class PurchaserController < ApplicationController
     @purchaser.save
   end
 
-  def show
-    @purchasers = current_user.purchaser(item)
-  end
-
   private
 
   def purchaser_params

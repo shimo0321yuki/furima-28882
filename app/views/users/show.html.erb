@@ -2,6 +2,7 @@
     <%= link_to image_tag('furima-logo-color.png' , size: '185x50'), "/" %>
 
   </header>
+
 <div class="contents row">
  <h2 class="items-sell-title"> <%= @nickname %>さんの出品一覧 </h2>
  <ul class='item-lists'>
@@ -36,8 +37,4 @@
    </li>
   <% end %>
  </ul> 
-</div>
-
-<div class="sell-btn-contents">
-  <%= link_to '購入履歴', purchaser_path %> 
 </div>
